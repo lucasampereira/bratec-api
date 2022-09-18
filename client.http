@@ -1,0 +1,62 @@
+#  ------------ Usuário ------------
+# Listar todos
+GET http://localhost:8080/api/user
+###
+
+#Detalhes usuário
+GET http://localhost:8080/api/user/2
+###
+
+# Apagar
+DELETE http://localhost:8080/api/user/1
+Authorization: Basic admin@fiap.com.br administrador
+###
+
+# Cadastrar
+POST http://localhost:8080/api/user
+Content-Type: application/json
+
+{
+      "name": "Admin",
+      "email": "admin@fiap.com.br",
+      "password": "administrador"
+}
+###
+
+# Atualizar
+PUT http://localhost:8080/api/user/2
+Content-Type: application/json
+Authorization: Basic admin@fiap.com.br administrador
+
+{
+      "name": "Chrissy",
+      "email": "sucodefruta@gmail.com"
+}
+###
+
+#  ------------ Locais (lojas) ------------
+# Listar todos
+GET http://localhost:8080/api/local
+###
+
+#Detalhes local
+GET http://localhost:8080/api/local/1
+###
+
+# Apagar
+DELETE http://localhost:8080/api/local/1
+Authorization: Basic admin@fiap.com.br administrador
+###
+
+# Cadastrar
+POST http://localhost:8080/api/local
+Content-Type: application/json
+
+{
+      "nome": "Melissa",
+      "email": "atendimento@melissa.com.br",
+      "senha": "melossa10",
+      "coordenadaLocal": "5,23",
+      "cnpj": "25.587.745/0002-98"
+}
+###
